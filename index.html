@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>E-commerce Product Page</title>
+  </head>
+  <body>
+    <!-- navbar  -->
+    <header>
+      <div class="nav">
+        <div class="logo">
+          <a href="#"
+            ><i
+              class="ri-booklet-line"
+              style="font-size: 2rem; color: #555555"
+            ></i
+            ><em>CARD4U</em></a
+          >
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <a href="#" class="nav-a"><li>SHOP</li> </a>
+            <a href="#" class="nav-a"><li>MEMBERSHIP</li></a>
+            <a href="#" class="nav-a"><li>COMMUNITY</li> </a>
+            <a href="#" class="nav-a"><li>ABOUT US</li> </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main" style="margin-bottom: 1rem;">
+        <div class="left-img"><img src="product-img.webp" alt="" /></div>
+        <div class="right-details">
+          <div class="heading">
+            <h1>Gratitude Cards</h1>
+            <h3 style="font-weight: 300; margin: 0.5rem 0rem">
+              <b> Rs. 1,900.00</b>
+              <span
+                style="
+                  font-weight: 300;
+                  font-size: 0.95rem;
+                  margin-left: 0.5rem;
+                "
+                >One Deck</span
+              >
+            </h3>
+          </div>
+          <p class="description">
+            Made in collaboration with A Network for Grateful Living, this deck
+            includes 100+ prompts to help you deepen awareness of life’s
+            abundance and open you to the joy and transformative possibilities
+            of gratefulness.
+          </p>
+          <div class="select">
+            <select name="option" id="">
+              <option value="">ONE DECK</option>
+              <option value="">12 DECK BUNDLE (Save 25%)</option>
+            </select>
+          </div>
+          <div style="display: flex; margin-top: .5rem;" class="qty">
+            <div class="quantity">
+              <p >QTY</p>
+              <button class="decrement">-</button>
+              <input type="text" class="quantity-input" value="1" />
+              <button class="increment">+</button>
+            </div>
+            <div class="long-btn">
+              <button>
+                <i
+                  class="ri-shopping-cart-2-fill"
+                  style="font-size: 2rem; color: #fff; margin: 0.5rem"
+                ></i
+                >ADD TO CART
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const decrementButton = document.querySelector(".decrement");
+        const incrementButton = document.querySelector(".increment");
+        const quantityInput = document.querySelector(".quantity-input");
+
+        decrementButton.addEventListener("click", function () {
+          let currentValue = parseInt(quantityInput.value);
+          if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+          }
+        });
+
+        incrementButton.addEventListener("click", function () {
+          let currentValue = parseInt(quantityInput.value);
+          quantityInput.value = currentValue + 1;
+        });
+      });
+    </script>
+  </body>
+</html>
